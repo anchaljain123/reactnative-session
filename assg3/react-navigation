@@ -1,0 +1,25 @@
+import { StackNavigator } from 'react-navigation';
+import LoginPage from './LoginPage';
+import ScanList from './ScanList';
+
+export default () =>{
+    const stackRoutes = {
+        Login: {
+            screen: LoginPage,
+            navigationOptions : {
+                title: 'Login',
+            }
+        },
+        ScanList: {
+            screen: ScanList,
+        },
+    };
+
+    return StackNavigator(stackRoutes,{
+        initialRouteName: 'Login',
+        navigationOptions : {
+            backgroundColor: 'orange',
+        }
+    });
+
+}

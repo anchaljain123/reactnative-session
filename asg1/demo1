@@ -1,0 +1,49 @@
+import React, { Component } from 'react';
+import { AppRegistry, View } from 'react-native';
+
+export default class FlexDirectionBasics extends Component {
+  render() {
+    return (
+      // Try setting `flexDirection` to `column`.
+      <View>
+        <View style={{flex:1,backgroundColor:'white',height: 30,}}></View>
+      <View style={{flex: 1, flexDirection: 'row',backgroundColor:'gray'}}>
+        <View style={{flexDirection:'row',flex:1}}>
+        <View style={{width: 30,height: 30, backgroundColor: 'white',borderRadius:50,margin:10}} />
+        </View>
+        <View style={{flexDirection:'row',justifyContent:'flex-end',flex:1}}>
+        <View style={{width: 20,flex:1, height: 30, backgroundColor: 'white',margin:10}} />
+        <View style={{width: 20,flex:1, height: 30, backgroundColor: 'white',margin:10}} />
+              </View>
+        </View>
+        <View style={{height: 100,backgroundColor:'white'}}>
+          <View style={{backgroundColor:'gray',flex:1,width:230,margin:10,height:50}}></View>
+        </View>
+        <View style={{height: 100,backgroundColor:'white',flexDirection:'row'}} >
+          <View style={{width: 50,flex:1, height: 70,backgroundColor:'gray',margin:10}}></View>
+          <View style={{width: 50,flex:1, height: 70,backgroundColor:'gray',margin:10}}></View>
+          <View style={{width: 50,flex:1, height: 70,backgroundColor:'gray',margin:10}}></View>
+        </View>
+        <View style = {{flexDirection : 'row',alignSelf: 'center'}}>
+       <View style={{width: 30,flex:1, height: 30,backgroundColor:'gray',margin:10}}></View>
+        <View style={{width: 30,flex:1, height: 30,backgroundColor:'gray',margin:10}}></View>
+         <View style={{width: 30,flex:1, height: 30,backgroundColor:'gray',margin:10}}></View>
+          <View style={{width: 30,flex:1, height: 30,backgroundColor:'gray',margin:10}}></View>
+          <View style={{width: 30,flex:1, height: 30,backgroundColor:'gray',margin:10}}></View>     
+        </View>
+         <View style = {{flexDirection : 'row',alignSelf: 'center'}}>
+          <View style={{flex:1, width:30,height:30,backgroundColor:'gray',margin:10,justifyContent: 'space-around'}}></View>   
+          <View style={{flex:1, width:30,height:30,backgroundColor:'gray',margin:10,justifyContent: 'space-around'}}></View>   
+        </View>
+         <View style = {{flexDirection : 'row'}}>
+          <View style={{flex:1,height: 50,backgroundColor:'gray',margin:10,borderRadius:'50%'}}></View>   
+          <View style={{flex:1,height:50,backgroundColor:'gray',margin:10,borderRadius:'50%'}}></View>  
+           <View style={{flex:1,height:50,backgroundColor:'gray',margin:10,borderRadius:'50%'}}></View>   
+        </View>
+      </View>
+    );
+  }
+};
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => FlexDirectionBasics);
